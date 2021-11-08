@@ -1,0 +1,61 @@
+/*
+  FONTS
+  Variables
+  General
+  Header
+  Main
+  Images
+  footer
+  Media Queries
+  Notes
+*/
+/*--------->FONTS<-----------*/
+/*--------->Variables<-----------*/
+:root {
+  --black: #000000;
+  --dark: #141414;
+  --green: #39ff14;
+  --grey: #E1E1E1;
+  --light-dark: #1B1B1B;
+  --light-grey: #F3F3F3;
+  --white: #ffffff;
+}
+
+body {
+  background: var(--dark);
+  color: var(--green);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/*--------->General Styles<-----------*/
+
+
+/*--------->HEADER<-----------*/
+
+/*--------->Main<-----------*/
+
+
+/*--------->Media Queries<-----------*/
+@media screen and (max-width: 699px) {
+
+  .buttons {
+    
+  }
+}
+
+/*--------->NOTES<-----------*/
+/*
+- Para centrar algo horizontalmente en navegadores modernos, usa display:
+ flex; justify-content: center;
+- Sin embargo, en navegadores antiguos como IE8-9, flexbox no está disponible.
+Para poder centrar un elemento horizontalmente con respecto a su contenedor,
+usa margin: 0 auto;
+*/
