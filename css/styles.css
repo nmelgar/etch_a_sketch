@@ -25,25 +25,24 @@ body {
   background: var(--dark);
   color: var(--green);
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
 #main-content {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 400px;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   padding: 0;
 }
 
 .squareDiv {
-  
-  width: 25px;
-  height: 25px;
-  background:  red;
-  margin-bottom: 5px;
-  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  background: red;
+  /* margin-bottom: 5px; */
+  /* margin-right: 5px; */
 }
 
 /*--------->General Styles<-----------*/
@@ -55,9 +54,7 @@ body {
 
 
 /*--------->Media Queries<-----------*/
-@media screen and (max-width: 699px) {
-
-}
+@media screen and (max-width: 699px) {}
 
 /*--------->NOTES<-----------*/
 /*
