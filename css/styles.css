@@ -29,11 +29,22 @@ body {
   padding: 0;
 }
 
-.main-content {
-  max-width: 1100px;
+#main-content {
+  max-width: 900px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  padding: 0;
 }
 
+.squareDiv {
+  
+  width: 25px;
+  height: 25px;
+  background:  red;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
 
 /*--------->General Styles<-----------*/
 
@@ -46,9 +57,6 @@ body {
 /*--------->Media Queries<-----------*/
 @media screen and (max-width: 699px) {
 
-  .buttons {
-    
-  }
 }
 
 /*--------->NOTES<-----------*/
