@@ -23,31 +23,62 @@
 
 body {
   background: var(--dark);
-  color: var(--green);
+  color: var(--white);
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-.container{
+.container {
   margin: 0 auto;
   width: 400px;
+  text-align: center;
 }
 
 #main-content {
-  max-width: 100%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   padding: 0;
 }
 
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+}
+
+.button-p {
+  padding: 10px 5px;
+}
+
+
+.button-p a {
+  color: var(--green);
+  border: 1px solid var(--grey);
+  text-decoration: none;
+  margin-right: 5px;
+  padding: 10px 25px;
+}
+
+.button-p a:hover {
+  color: var(--black);
+  text-decoration: none;
+  background: var(--white);
+}
+
+/*16x16 grid*/
 .squareDiv {
-  width: 30px;
-  height: 30px;
-  background: red;
-  /* margin-bottom: 5px; */
-  /* margin-right: 5px; */
+  width: 25px;
+  height: 25px;
+  background: var(--grey)
+    /* margin-bottom: 5px; */
+    /* margin-right: 5px; */
 }
 
 /*--------->General Styles<-----------*/
