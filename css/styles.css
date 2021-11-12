@@ -29,9 +29,10 @@ body {
   padding: 0;
 }
 
+/*This hold the max width of the container*/
 .container {
   margin: 0 auto;
-  width: 400px;
+  width: 480px;
   text-align: center;
 }
 
@@ -39,7 +40,7 @@ body {
   width: 100%;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
+  /* grid-template-columns: repeat(userChose, 1fr); */
   padding: 0;
 }
 
@@ -74,8 +75,8 @@ body {
 
 /*16x16 grid*/
 .squareDiv {
-  width: 25px;
-  height: 25px;
+  /* width: 30px; */
+  /* height: 30px; */
   background: var(--grey)
     /* margin-bottom: 5px; */
     /* margin-right: 5px; */

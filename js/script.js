@@ -1,16 +1,21 @@
 const container = document.getElementById("main-content");
 
-//number of rows == number of columns
-//user introduces number of rows
-
 let userChose = prompt("Choose a number between 8, 16, 32 and 64");
 const gridCounter = userChose * userChose;
 
 function sixteenSquares() {
   for (i = 0; i < gridCounter; i++) {
+    //create the square
     const squareDiv = document.createElement("div");
+    //add the clase "squareDiv" to the square
     squareDiv.classList.add('squareDiv');
-    // squareDiv.id = "individual-square"
+    //create the width and height of each square
+    //using the max size of the width container/the desired #of squares
+    squareDiv.style.width = 480 / userChose + "px";
+    squareDiv.style.height = 480 / userChose + "px";
+    //create the columns based on the amount of squares
+    container.style.setProperty('grid-template-columns', 'repeat(' + userChose + ', 1fr)');
+    //add the square to the "main-content" element
     container.appendChild(squareDiv);
   }
   paintBlack();
@@ -30,4 +35,3 @@ function paintBlack() {
     });
   }
 }
-
