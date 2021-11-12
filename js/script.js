@@ -23,7 +23,8 @@ function sixteenSquares() {
 
 sixteenSquares();
 
-let gridSizeButton = document.getElementById("grid-size-button").addEventListener("click", chooseGrid);
+// let gridSizeButton = document.getElementById("grid-size-button").addEventListener("click", chooseGrid);
+let gridSizeButton = document.getElementById("color-style-button").addEventListener("click", paintColor);
 
 
 //function to paint black squares
@@ -34,4 +35,18 @@ function paintBlack() {
       individualSquare[j].style.backgroundColor = "#000000";
     });
   }
+}
+
+//function to paint squares with random colors
+function paintColor() {
+  let individualSquare = document.querySelectorAll(".squareDiv");
+  for (let c = 0; c < individualSquare.length; c++) {
+    individualSquare[c].addEventListener("mouseover", function paintWithColors() {
+      let colorRed = Math.floor(Math.random() *256);
+      let colorGreen = Math.floor(Math.random() *256);
+      let colorBlue = Math.floor(Math.random() *256);
+      individualSquare[c].style.backgroundColor = 'rgb(' + colorRed + ', ' + colorGreen + ', ' + colorBlue + ')';
+    });
+  }
+
 }
