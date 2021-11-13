@@ -1,6 +1,10 @@
 const container = document.getElementById("main-content");
 
 let userChose = prompt("Choose a number between 8, 16, 32 and 64");
+
+//add a function to avoid user to choose a number langer than 64
+
+
 const gridCounter = userChose * userChose;
 
 function sixteenSquares() {
@@ -23,11 +27,14 @@ function sixteenSquares() {
 
 sixteenSquares();
 
-// let gridSizeButton = document.getElementById("grid-size-button").addEventListener("click", chooseGrid);
-let gridSizeButton = document.getElementById("color-style-button").addEventListener("click", paintColor);
+
+
 
 
 //function to paint black squares
+
+let paintBlackButton = document.getElementById("paint-black-button").addEventListener("click", paintBlack);
+
 function paintBlack() {
   let individualSquare = document.querySelectorAll(".squareDiv");
   for (let j = 0; j < individualSquare.length; j++) {
@@ -38,15 +45,37 @@ function paintBlack() {
 }
 
 //function to paint squares with random colors
+let paintColorButton = document.getElementById("color-style-button").addEventListener("click", paintColor);
+
 function paintColor() {
   let individualSquare = document.querySelectorAll(".squareDiv");
   for (let c = 0; c < individualSquare.length; c++) {
     individualSquare[c].addEventListener("mouseover", function paintWithColors() {
-      let colorRed = Math.floor(Math.random() *256);
-      let colorGreen = Math.floor(Math.random() *256);
-      let colorBlue = Math.floor(Math.random() *256);
+      let colorRed = Math.floor(Math.random() * 256);
+      let colorGreen = Math.floor(Math.random() * 256);
+      let colorBlue = Math.floor(Math.random() * 256);
       individualSquare[c].style.backgroundColor = 'rgb(' + colorRed + ', ' + colorGreen + ', ' + colorBlue + ')';
     });
   }
 
+}
+
+//to erase the colored parts
+let eraseColorButton = document.getElementById("eraser-button").addEventListener("click", erasePaint);
+
+function erasePaint() {
+  let individualSquare = document.querySelectorAll(".squareDiv");
+  for (let e = 0; e < individualSquare.length; e++) {
+    individualSquare[e].addEventListener("mouseover", function eraseColor() {
+      individualSquare[e].style.backgroundColor = "#E1E1E1";
+    });
+  }
+}
+
+
+//to reload and restart the site
+let restartButton = document.getElementById("restart-button").addEventListener("click", reloadPage);
+
+function reloadPage() {
+  window.location.reload();
 }
