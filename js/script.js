@@ -1,13 +1,13 @@
 const container = document.getElementById("main-content");
 
-let userChose = prompt("Choose a number between 8, 16, 32 and 64");
+let userChose = prompt("Choose a number smaller than 64 ");
 
 //add a function to avoid user to choose a number langer than 64
 
 
 const gridCounter = userChose * userChose;
 
-function sixteenSquares() {
+function createSquares() {
   for (i = 0; i < gridCounter; i++) {
     //create the square
     const squareDiv = document.createElement("div");
@@ -25,10 +25,7 @@ function sixteenSquares() {
   paintBlack();
 }
 
-sixteenSquares();
-
-
-
+createSquares();
 
 
 //function to paint black squares
